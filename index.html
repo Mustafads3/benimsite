@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Naz Hanım Soruyor</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      margin-top: 100px;
+    }
+    h1 { color: #ff1493; }
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .yes { background-color: #28a745; color: #fff; }
+    .no { background-color: #dc3545; color: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Naz Hanım, benimle çıkar mısın? 💘</h1>
+  <button class="yes" onclick="yesClick()">Evet</button>
+  <button class="no" id="noBtn">Hayır</button>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    noBtn.addEventListener('mouseover', function() {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    });
+
+    function yesClick() {
+      window.location.href = "https://www.youtube.com/watch?v=ylklClZGO24&list=RDylklClZGO24&start_radio=1";
+    }
+  </script>
+</body>
+</html>
